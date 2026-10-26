@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dr. Anjali & Jolly — A Wedding Story</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap');
+:root{--wine:#310710;--maroon:#731528;--red:#a3223a;--gold:#e6b84e;--cream:#fff4dc;--muted:#d7b9af}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#170306;color:var(--cream);font-family:DM Sans,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:50;pointer-events:none;opacity:.13;background-image:radial-gradient(#fff .55px,transparent .7px);background-size:5px 5px}
+a{color:inherit;text-decoration:none}
+.cursor{position:fixed;z-index:60;pointer-events:none;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,#e6b84e18,transparent 67%);transform:translate(-50%,-50%)}
+nav{position:fixed;z-index:55;left:0;right:0;top:0;padding:18px 5vw;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(#170306e8,transparent);backdrop-filter:blur(4px)}
+.logo{font:32px Great Vibes;color:#f4ce72}.navlinks{display:flex;gap:25px;font-size:9px;letter-spacing:2px;text-transform:uppercase}.navlinks a{opacity:.75}.navlinks a:hover{color:#f4ce72;opacity:1}
+
+.hero{min-height:100svh;position:relative;overflow:hidden;display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,#8e2337,#3b0b15 42%,#160306 78%)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#160306 0,transparent 25%,transparent 70%,#16030688)}
+.arch{position:absolute;inset:5% 8%;border:1px solid #e6b84e55;border-radius:50% 50% 0 0;box-shadow:0 0 0 15px #e6b84e09,0 0 0 35px #e6b84e05}
+.arch:before{content:"";position:absolute;inset:5%;border:1px dashed #e6b84e55;border-radius:50% 50% 0 0}
+.arch:after{content:"";position:absolute;left:50%;top:-2%;width:2px;height:104%;background:linear-gradient(transparent,#e6b84e44,transparent)}
+.heroCopy{z-index:4;text-align:center;position:relative;padding:100px 20px 70px}.om{font-size:24px;color:#ffd87d;letter-spacing:8px}.kicker{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:#e8ca84;margin:18px 0}.script{font:clamp(34px,6vw,72px) Great Vibes;color:#ffd887}
+.names{font:700 clamp(62px,11vw,145px)/.76 Cormorant Garamond;text-shadow:0 18px 55px #0009}.names small{display:block;font:48px Great Vibes;color:#f1c85d;margin:12px}.date{font:600 18px Cormorant Garamond;letter-spacing:7px;margin-top:30px}.sub{font-size:9px;letter-spacing:3px;color:#d7b8b0;margin:10px 0 28px}
+.enter{display:inline-flex;padding:14px 24px;border:1px solid #e6b84e88;border-radius:99px;background:#e6b84e14;font-size:9px;letter-spacing:2px;text-transform:uppercase}
+.ganpati{position:absolute;z-index:3;width:min(260px,34vw);aspect-ratio:3/4;left:4%;bottom:8%;border-radius:140px 140px 20px 20px;overflow:hidden;border:3px solid #e6b84e99;box-shadow:0 30px 80px #0009;transform:rotate(-5deg);animation:levitate 5s ease-in-out infinite}
+.ganpati img{width:100%;height:100%;object-fit:cover}.ganpati:after{content:"॥ श्री गणेशाय नमः ॥";position:absolute;bottom:0;left:0;right:0;padding:15px 8px;text-align:center;background:#1b0509c9;font:20px Cormorant Garamond;color:#f3ce76}
+.diyaa{position:absolute;right:7%;bottom:10%;z-index:4;font-size:55px;filter:drop-shadow(0 0 25px #f2bd4c);animation:flame 1s ease-in-out infinite alternate}
+@keyframes levitate{50%{transform:translateY(-15px) rotate(-3deg)}}@keyframes flame{to{transform:scale(1.08)}}
+.petal{position:fixed;top:-30px;width:10px;height:7px;background:#f3b7a4;border-radius:100% 0;z-index:45;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translate(var(--x),110vh) rotate(700deg);opacity:0}}
+
+.intro{min-height:85vh;position:relative;padding:120px 7vw;background:#fff0d1;color:#3c0d14;overflow:hidden}.intro:before{content:"ॐ";position:absolute;font:400 55vw Cormorant Garamond;color:#9e23330a;right:-8%;top:-25%}
+.center{max-width:900px;margin:auto;text-align:center;position:relative;z-index:2}.eyebrow{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:#9a2a3c}.intro h2,.section h2{font:600 clamp(48px,7vw,88px)/.95 Cormorant Garamond;margin:10px 0 25px}.intro p{font:24px/1.55 Cormorant Garamond;max-width:720px;margin:0 auto}.bless{margin-top:40px;font:34px Great Vibes;color:#a32138}
+
+.section{position:relative;padding:110px 6vw;background:#1a0509;overflow:hidden}.section.alt{background:#27080f}.section .top{text-align:center;max-width:850px;margin:auto}.section h2{color:#fff0d2}.section .desc{max-width:620px;margin:0 auto 55px;text-align:center;color:#cdb1a9;font-size:13px;line-height:1.8}
+
+.eventScene{max-width:1180px;margin:auto;min-height:640px;display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}
+.visual{height:560px;position:relative;perspective:1200px}.mainPhoto{position:absolute;inset:25px 55px;background-size:cover;background-position:center;border:12px solid #fff5df;box-shadow:35px 35px 70px #0008;transform:rotateY(-9deg) rotateZ(-2deg);transition:.5s}.visual:hover .mainPhoto{transform:rotateY(0) rotateZ(0) translateY(-8px)}
+.mehendi .mainPhoto{background-image:url('https://blog.djriz.com/hs-fs/hubfs/SalimaAwaizWed_0084.jpg?name=SalimaAwaizWed_0084.jpg&width=481')}
+.haldi .mainPhoto{background-image:url('https://weddingphotographybysf.com/wp-content/uploads/2024/11/haldi-function-photoshoot-1.webp')}
+.wedding .mainPhoto{background-image:url('https://i.etsystatic.com/60265740/r/il/abd6cd/7572779479/il_fullxfull.7572779479_d8g6.jpg')}
+.reception .mainPhoto{background-image:url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=85')}
+.floatCard{position:absolute;right:0;top:45px;width:175px;padding:20px;background:#fff2d8;color:#51101c;box-shadow:0 25px 50px #0008;transform:rotate(8deg);font-family:Cormorant Garamond;text-align:center}.floatCard b{display:block;font-size:35px}.floatCard span{font-size:10px;letter-spacing:2px}
+.stamp{position:absolute;left:5px;bottom:25px;width:105px;height:105px;border:1px solid #e6b84e88;border-radius:50%;display:grid;place-items:center;text-align:center;color:#f1cb75;font-size:9px;letter-spacing:2px;transform:rotate(-12deg);background:#2c0710}
+.eventInfo{position:relative}.eventNo{font-size:9px;letter-spacing:4px;color:#e9c45f}.eventInfo h3{font:76px Great Vibes;color:#ffd982;margin:10px 0}.eventInfo .dateLine{font:600 22px Cormorant Garamond}.eventInfo .venueLine{font-size:12px;line-height:1.8;color:#d8bcb4;margin:18px 0}.tag{display:inline-block;border:1px solid #e6b84e55;border-radius:99px;padding:9px 13px;font-size:8px;letter-spacing:2px;text-transform:uppercase}
+.mehendi{background:linear-gradient(120deg,#1a0509,#26100f)}.haldi{background:linear-gradient(120deg,#2b1803,#4b2008)}.haldi .eventInfo h3{color:#ffd56b}.wedding{background:linear-gradient(120deg,#180308,#4d0e20)}.reception{background:linear-gradient(120deg,#0b0a14,#26113d)}.reception .eventInfo h3{color:#e8c8ff}
+
+.count{background:#f2d38b;color:#4c1119;text-align:center;padding:90px 20px}.count .eyebrow{color:#8c2336}.counter{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.box{width:125px;background:#fff5dc;border:1px solid #8b283755;border-radius:18px;padding:18px}.box b{display:block;font:52px Cormorant Garamond}.box span{font-size:8px;letter-spacing:2px}
+
+.venues{background:#140307;padding:100px 6vw}.venueGrid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.venue{padding:28px;border:1px solid #e6b84e33;background:#ffffff06;border-radius:22px}.venue .small{font-size:8px;letter-spacing:3px;color:#e9c45f;text-transform:uppercase}.venue h3{font:31px Cormorant Garamond;margin:10px 0}.venue p{font-size:11px;line-height:1.8;color:#c8ada6}.venue a{font-size:8px;letter-spacing:2px;color:#f0c96c}
+
+.final{min-height:80vh;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 30%,#9b3048,#21050b 60%)}.final h2{font:clamp(65px,10vw,120px) Great Vibes;color:#ffda85;margin:15px}.final p{max-width:620px;color:#d8b9b0;line-height:1.8}.btn{display:inline-block;margin-top:20px;padding:14px 25px;border-radius:99px;background:#e7b94f;color:#26060c;font-weight:700;font-size:9px;letter-spacing:2px;text-transform:uppercase}
+footer{text-align:center;background:#0a0103;padding:45px}.foot{font:45px Great Vibes;color:#e8bc58}.foot small{display:block;font:8px DM Sans;letter-spacing:3px;color:#795c59;margin-top:8px}
+
+.reveal{opacity:0;transform:translateY(35px);transition:1s cubic-bezier(.2,.7,.2,1)}.show{opacity:1;transform:none}
+@media(max-width:900px){.ganpati{width:180px;left:1%}.eventScene{grid-template-columns:1fr;gap:20px}.visual{height:500px}.eventInfo{text-align:center}.venueGrid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.navlinks{display:none}.ganpati{width:115px;height:155px;bottom:6%;left:3%}.diyaa{font-size:38px}.heroCopy{padding-top:120px}.names{font-size:70px}.script{font-size:40px}.intro,.section,.venues{padding:80px 18px}.eventScene{min-height:auto}.visual{height:410px}.mainPhoto{inset:20px 25px}.floatCard{width:120px;padding:12px}.floatCard b{font-size:25px}.stamp{width:75px;height:75px}.eventInfo h3{font-size:62px}.venueGrid{grid-template-columns:1fr}.count{padding:75px 18px}.box{width:105px}.box b{font-size:42px}}
+</style>
+</head>
+<body>
+<div class="cursor"></div>
+<nav><div class="logo">A & J</div><div class="navlinks"><a href="#story">Story</a><a href="#mehendi">Mehendi</a><a href="#haldi">Haldi</a><a href="#wedding">Wedding</a><a href="#reception">Reception</a></div></nav>
+
+<header class="hero">
+<div class="arch"></div>
+<div class="heroCopy">
+<div class="om">ॐ</div><div class="kicker">With the blessings of Lord Ganesha & our families</div>
+<div class="script">A celebration of love</div>
+<h1 class="names">Dr. Anjali <small>&amp;</small> Jolly</h1>
+<div class="date">08 · 09 · 10 DECEMBER 2026</div>
+<div class="sub">MEHENDI · HALDI · SHUBH VIVAH · RECEPTION</div>
+<a class="enter" href="#story">Enter the wedding story ✦</a>
+</div>
+<div class="ganpati"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ganesh%20Murti%20-%20Traditional%20Idol%20of%20Lord%20Ganesha%20012.jpg" alt="Ganpati idol"></div>
+<div class="diyaa">🪔</div>
+</header>
+
+<section class="intro" id="story"><div class="center reveal"><div class="eyebrow">शुभारंभ · The auspicious beginning</div><h2>Before the music,<br>before the mandap...</h2><p>We seek the blessings of Lord Ganesha and invite you to become a part of the most beautiful chapter of our lives.</p><div class="bless">Ganpati Bappa Morya ♥</div></div></section>
+
+<section class="section mehendi" id="mehendi">
+<div class="top reveal"><div class="eyebrow">Chapter 01 · 08 December 2026</div><h2>Mehendi Ki Raat</h2><div class="desc">An evening painted in henna, flowers, laughter and music. Let the colours of the celebration begin.</div></div>
+<div class="eventScene">
+<div class="visual reveal"><div class="mainPhoto"></div><div class="floatCard"><b>08</b><span>DECEMBER<br>2026</span></div><div class="stamp">MEHENDI<br>♥<br>RANG</div></div>
+<div class="eventInfo reveal"><div class="eventNo">THE MEHENDI CELEBRATION</div><h3>Mehendi</h3><div class="dateLine">08 December 2026</div><div class="venueLine">IK Farm &amp; Resort<br>Ratanpur, Gujarat</div><span class="tag">Henna · Music · Masti</span></div>
+</div>
+</section>
+
+<section class="section haldi" id="haldi">
+<div class="top reveal"><div class="eyebrow">Chapter 02 · 09 December 2026</div><h2>Haldi &amp; Sunshine</h2><div class="desc">Yellow everywhere. Marigolds in the air. A little turmeric, a lot of laughter and blessings all around.</div></div>
+<div class="eventScene">
+<div class="visual reveal"><div class="mainPhoto"></div><div class="floatCard"><b>09</b><span>DECEMBER<br>2026</span></div><div class="stamp">HALDI<br>☀<br>GLOW</div></div>
+<div class="eventInfo reveal"><div class="eventNo">THE HALDI CELEBRATION</div><h3>Haldi</h3><div class="dateLine">09 December 2026</div><div class="venueLine">IK Farm &amp; Resort<br>Ratanpur, Gujarat</div><span class="tag">Genda Phool · Haldi · Happiness</span></div>
+</div>
+</section>
+
+<section class="section wedding" id="wedding">
+<div class="top reveal"><div class="eyebrow">Chapter 03 · 10 December 2026</div><h2>When Two Become One</h2><div class="desc">The sacred morning. The mandap. The varmala. The vows. And a lifetime beginning with one beautiful “yes”.</div></div>
+<div class="eventScene">
+<div class="visual reveal"><div class="mainPhoto"></div><div class="floatCard"><b>10</b><span>10:00 AM<br>SHUBH VIVAH</span></div><div class="stamp">VARMALA<br>✦<br>FOREVER</div></div>
+<div class="eventInfo reveal"><div class="eventNo">THE SACRED CEREMONY</div><h3>Wedding</h3><div class="dateLine">10 December 2026 · 10:00 AM</div><div class="venueLine">Bliss Dine Restaurant &amp; Banquet<br>Chandlodiya, Ahmedabad</div><span class="tag">Varmala · Pheras · Forever</span></div>
+</div>
+</section>
+
+<section class="section reception" id="reception">
+<div class="top reveal"><div class="eyebrow">Chapter 04 · 10 December 2026</div><h2>The Grand Celebration</h2><div class="desc">The rituals are done. Now the real party begins. Dress up, bring your best dance moves and celebrate the newlyweds.</div></div>
+<div class="eventScene">
+<div class="visual reveal"><div class="mainPhoto"></div><div class="floatCard"><b>7 PM</b><span>10 DECEMBER<br>2026</span></div><div class="stamp">RECEPTION<br>✦<br>LET'S PARTY</div></div>
+<div class="eventInfo reveal"><div class="eventNo">THE EVENING CELEBRATION</div><h3>Reception</h3><div class="dateLine">10 December 2026 · 7:00 PM</div><div class="venueLine">The Spree Banquet<br>Ahmedabad</div><span class="tag">Dinner · Dance · Celebration</span></div>
+</div>
+</section>
+
+<section class="count"><div class="center reveal"><div class="eyebrow">Until the wedding morning</div><h2>Counting every heartbeat...</h2></div><div class="counter"><div class="box"><b id="d">0</b><span>DAYS</span></div><div class="box"><b id="h">0</b><span>HOURS</span></div><div class="box"><b id="m">0</b><span>MINUTES</span></div><div class="box"><b id="s">0</b><span>SECONDS</span></div></div></section>
+
+<section class="venues"><div class="center reveal"><div class="eyebrow">Save the locations</div><h2>Where to join us</h2></div><div class="venueGrid">
+<div class="venue reveal"><div class="small">08 &amp; 09 December</div><h3>IK Farm &amp; Resort</h3><p>Mehendi &amp; Haldi<br>Ratanpur, Gujarat</p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=IK%20Farm%20%26%20Resort%20Ratanpur%20Gujarat">OPEN MAP ↗</a></div>
+<div class="venue reveal"><div class="small">10 December · 10 AM</div><h3>Bliss Dine Restaurant &amp; Banquet</h3><p>Wedding Ceremony<br>Chandlodiya, Ahmedabad</p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bliss%20Dine%20Restaurant%20%26%20Banquet%20Chandlodiya%20Ahmedabad">OPEN MAP ↗</a></div>
+<div class="venue reveal"><div class="small">10 December · 7 PM</div><h3>The Spree Banquet</h3><p>Reception<br>Ahmedabad</p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=The%20Spree%20Banquet%20Ahmedabad">OPEN MAP ↗</a></div>
+</div></section>
+
+<section class="final"><div class="center reveal"><div class="eyebrow">And now...</div><h2>Come celebrate<br>our forever</h2><p>Your presence, blessings and smiles will make these celebrations complete. We cannot wait to welcome you.</p><a href="#story" class="btn">Relive the wedding story ♥</a></div></section>
+<footer><div class="foot">Anjali &amp; Jolly<small>08 · 09 · 10 DECEMBER 2026</small></div></footer>
+
+<script>
+const cur=document.querySelector('.cursor');addEventListener('pointermove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.1});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+const target=new Date('2026-12-10T10:00:00+05:30').getTime();function tick(){let x=Math.max(0,target-Date.now());d.textContent=Math.floor(x/864e5);h.textContent=String(Math.floor(x/36e5)%24).padStart(2,'0');m.textContent=String(Math.floor(x/6e4)%60).padStart(2,'0');s.textContent=String(Math.floor(x/1e3)%60).padStart(2,'0')}tick();setInterval(tick,1000);
+function petal(){let p=document.createElement('i');p.className='petal';p.style.left=Math.random()*100+'vw';p.style.setProperty('--x',(Math.random()*260-130)+'px');p.style.animationDuration=(6+Math.random()*7)+'s';document.body.appendChild(p);setTimeout(()=>p.remove(),14000)}setInterval(petal,650);
+</script>
+</body>
+</html>
