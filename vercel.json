@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/anjali-jolly-wedding-v2.html"
+    }
+  ]
+}
